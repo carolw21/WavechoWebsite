@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Wavecho, LLC</title>
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery-2.1.1.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,800,700,300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=BenchNine:300,400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+	<!-- ====================================================
+	header section -->
+	<div class="top-header">
+		<div class="container">
+			<div class="row part">
+				<div class="col-xs-3 header-logo">
+					<br>
+					<a href="index.html"><img src="images/logo.png" alt="" class="img-responsive logo"></a>
+				</div>
+
+				<div class="col-md-7 center">
+					<nav class="navbar navbar-default">
+					  <div class="container-fluid nav-bar">
+					    <!-- Brand and toggle get grouped for better mobile display -->
+					    <div class="navbar-header">
+					      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					        <span class="sr-only">Toggle navigation</span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					      </button>
+					    </div>
+
+					    <!-- Collect the nav links, forms, and other content for toggling -->
+					    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav navbar-right">
+					        <li><a class="menu" href="index.html" >Home</a></li>
+					        <li><a class="menu" href="about.html">About Us</a></li>
+					        <li><a class="menu" href="portfolio.html">Portfolio</a></li>
+					        <li><a class="menu" href="contact.html">Contact Us</a></li>
+					      </ul>
+					    </div><!-- /navbar-collapse -->
+					  </div><!-- / .container-fluid -->
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div> <!-- end of header area -->
+
+
+		<!-- portfolio section starts here -->
+		<div class="service text-center" id="service">
+			<div class="container">
+				<div class="row" id="row">
+				</div>
+				<script>
+          var url = document.location.href,
+          params = url.split('?')[1],
+          data = params.split('=')[1];
+          var temp = data.split('-'),
+          type = temp[0],
+          num = parseInt(temp[1]);
+					var ongoinghouseimages = [[
+            'images/1_1.jpg',
+            'images/1_2.jpg',
+            'images/1_3.jpg',
+            'images/1_4.jpg',
+            'images/1_5.jpg',
+            'images/1_6.jpg',
+            'images/1_7.jpg',
+            'images/1_8.jpg',
+            'images/1_9.jpg'],
+            [
+            'images/1_1.jpg',
+            'images/1_2.jpg',
+            'images/1_3.jpg',
+            'images/1_4.jpg',
+            'images/1_5.jpg',
+            'images/1_6.jpg',
+            'images/1_7.jpg',
+            'images/1_8.jpg',
+            'images/1_9.jpg'],
+            [
+            'images/1_1.jpg',
+            'images/1_2.jpg',
+            'images/1_3.jpg',
+            'images/1_4.jpg',
+            'images/1_5.jpg',
+            'images/1_6.jpg',
+            'images/1_7.jpg',
+            'images/1_8.jpg',
+            'images/1_9.jpg'],
+            [
+            'images/1_1.jpg',
+            'images/1_2.jpg',
+            'images/1_3.jpg',
+            'images/1_4.jpg',
+            'images/1_5.jpg',
+            'images/1_6.jpg',
+            'images/1_7.jpg',
+            'images/1_8.jpg',
+            'images/1_9.jpg']
+					];
+          var finishedhouseimages = [[
+							'images/1_1.jpg',
+							'images/1_2.jpg',
+							'images/1_3.jpg',
+							'images/1_4.jpg',
+              'images/1_5.jpg',
+              'images/1_6.jpg',
+              'images/1_7.jpg',
+              'images/1_8.jpg',
+              'images/1_9.jpg'],
+              [
+							'images/1_1.jpg',
+							'images/1_2.jpg',
+							'images/1_3.jpg',
+							'images/1_4.jpg',
+              'images/1_5.jpg',
+              'images/1_6.jpg',
+              'images/1_7.jpg',
+              'images/1_8.jpg',
+              'images/1_9.jpg'],
+              [
+							'images/1_1.jpg',
+							'images/1_2.jpg',
+							'images/1_3.jpg',
+							'images/1_4.jpg',
+              'images/1_5.jpg',
+              'images/1_6.jpg',
+              'images/1_7.jpg',
+              'images/1_8.jpg',
+              'images/1_9.jpg'],
+              [
+							'images/1_1.jpg',
+							'images/1_2.jpg',
+							'images/1_3.jpg',
+							'images/1_4.jpg',
+              'images/1_5.jpg',
+              'images/1_6.jpg',
+              'images/1_7.jpg',
+              'images/1_8.jpg',
+              'images/1_9.jpg']
+					];
+          if(type=='ongoing'){
+            $('#row').append('<h2 style="margin-bottom:30px">Ongoing House '+(num+1)+'</h2>');
+            for(var i=0; i<ongoinghouseimages[num].length; i++){
+  						$('#row').append('<div class="col-md-4 col-sm-4 switch"><div class="detailed-img"><img class="img-responsive" src="'+ongoinghouseimages[num][i]+'" alt="" /></div><div>');
+  					}
+          }
+          else{
+            $('#row').append('<h2 style="margin-bottom:30px">Finished House '+(num+1)+'</h2>');
+            for(var i=0; i<finishedhouseimages[num].length; i++){
+  						$('#row').append('<div class="col-md-4 col-sm-4 switch"><div class="detailed-img"><img class="img-responsive" src="'+finishedhouseimages[num][i]+'" alt="" /></div><div>');
+  					}
+          }
+				</script>
+			</div>
+		</div><!-- end of portfolio section -->
+
+
+		<!-- footer starts here -->
+		<footer style="margin-top:-30px" class="footer clearfix">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-5 footer-para">
+						<p>&copy;wavechollc.com All rights reserved</p>
+					</div>
+
+					<div class="col-xs-55 text-right">
+            <a href=""><i class="fa fa-mail-reply"></i></a>
+						<a href=""><i class="fa fa-facebook"></i></a>
+						<a href=""><i class="fa fa-skype"></i></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+
+	<!-- script tags
+	============================================================= -->
+	<script src="js/smoothscroll.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/custom.js"></script>
+
+</body>
+</html>
