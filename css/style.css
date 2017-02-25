@@ -120,35 +120,16 @@ li a.active{
 	padding: 0 !important;
 	background: #000 !important;
 }
-.carousel-caption h1{
+.caption h1{
 	font-size: 9.3vw;
-	color: #fff;
 	text-transform: uppercase;
 	margin-bottom: 0;
 }
-.carousel-caption p{
+.caption p{
 	font-size: 3.13vw;
-	color: #fff;
 	text-transform: uppercase;
 	font-weight: bold;
 	margin-top: 0;
-}
-.carousel-caption button{
-	width: 240px;
-	height: 60px;
-	background: #3a9ecb;
-	color: #fff;
-	font-size: 30px;
-	text-transform: uppercase;
-	border:0;
-	transition:all .5s ease 0s;
-	-webkit-transition:all .5s ease 0s;
-	-moz-transition:all .5s ease 0s;
-	-o-transition:all .5s ease 0s;
-	-ms-transition:all .5s ease 0s;
-}
-.carousel-caption button:hover{
-	background: #2a2a2a;
 }
 .carousel-control{
 	width: 5%;
@@ -162,13 +143,15 @@ li a.active{
 .item{
 	position: relative;
 }
-.carousel-caption {
-	position: absolute;
+.caption {
 	text-align: left;
 	left: 14%;
   line-height: 1;
-  top: 50%;
-  margin-top: -27%;
+	margin-left: 6%;
+	margin-top: -2.9%;
+	float: left;
+	color: black;
+	z-index: 100;
 }
 .carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
   font-size: 18px;
@@ -327,7 +310,7 @@ li a.active{
 }
 .detailed-img{
 	width: 300px;
-  height: 200px;
+  height: 225px;
   background: #ffffff;
   position: relative;
 	margin-left: auto;
@@ -335,11 +318,14 @@ li a.active{
 	margin-bottom: 60px;
 }
 .detailed-img img{
+	width: 300px;
+  height: 225px;
 	position: absolute;
 }
-.house {
-	margin-bottom: 60px;
+.house .service-img img{
 	cursor: pointer;
+	width: 350px;
+	height: 216px;
 }
 
 /*team section*/
@@ -536,6 +522,13 @@ li a.active{
 
 
 /*======================css for carousel=========================*/
+.carousel-fade {
+	width: 402px;
+	height: 301px;
+	margin-right: 6%;
+	float: right
+}
+
 .carousel-fade .carousel-inner .item {
   opacity: 0;
   transition-property: opacity;
@@ -543,6 +536,11 @@ li a.active{
 
 .carousel-fade .carousel-inner .active {
   opacity: 1;
+}
+
+.carousel-inner>.item>img, .carousel-inner>.item>a>img{
+	height: 301px;
+	width: 402px;
 }
 
 .carousel-fade .carousel-inner .active.left,
@@ -647,6 +645,17 @@ responsive area
 	.contact-info .info-detail {
 		width: 77%;
 	}
+	.carousel-fade {
+		height:260px;
+		width:347px;
+	}
+	.carousel-inner>.item>img, .carousel-inner>.item>a>img{
+		height:260px;
+		width:347px;
+	}
+	.caption{
+		margin-top: -1%;
+	}
 	.switch {
 		width: 50%;
 	}
@@ -662,7 +671,7 @@ responsive area
 }
 
 /* xs */
-@media (min-width: 480px) and (max-width: 767px) {
+@media (min-width: 662px) and (max-width: 767px) {
 	.header-logo img{
 	  margin-top: 20px;
 	}
@@ -675,6 +684,19 @@ responsive area
 	}
 	.contact-info h3 {
 		width: 90%;
+	}
+	.carousel-fade {
+		height:260px;
+		width:347px;
+		margin-right:4%
+	}
+	.carousel-inner>.item>img, .carousel-inner>.item>a>img{
+		height:260px;
+		width:347px;
+	}
+	.caption{
+		margin-top: 2%;
+		margin-left: 4%
 	}
 	.contact-info .info-detail {
 		width: 90%;
@@ -690,6 +712,54 @@ responsive area
   }
 }
 
+@media (min-width: 480px) and (max-width: 661px) {
+	.header-logo img{
+		margin-top: 20px;
+	}
+	.center {
+		margin-top: 2%;
+	}
+	.part{
+		width: 100%;
+		padding-left: 4%;
+	}
+	.contact-info h3 {
+		width: 90%;
+	}
+	.carousel-fade {
+		height:260px;
+		width:347px;
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.carousel-inner>.item>img, .carousel-inner>.item>a>img{
+		height:260px;
+		width:347px;
+	}
+	.caption{
+		margin-top: 2%;
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+		width: 261.3px;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	.contact-info .info-detail {
+		width: 90%;
+	}
+	.navbar-default .navbar-nav>li>a {
+		font-size: 20px;
+	}
+	h2 {
+		font-size: 70px !important;
+	}
+	h4{
+			font-size: 21px !important;
+	}
+}
+
 /* XS Portrait */
 @media (max-width: 479px) {
 	.top-header img.logo {
@@ -702,6 +772,26 @@ responsive area
 		width: 100%;
 		padding-left: 4%;
 	}
+	.caption{
+		margin-top: -4%;
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+		width: 261.3px;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	.carousel-fade {
+		height:260px;
+		width:347px;
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.carousel-inner>.item>img, .carousel-inner>.item>a>img{
+		height:260px;
+		width:347px;
+	}
 	.navbar-default .navbar-toggle {
 		 border-color: #fff;
 		 right: 10%;
@@ -712,9 +802,6 @@ responsive area
 	}
 	.header-backup{
 		height: 80px;
-	}
-	.carousel-caption {
-		top: 46%;
 	}
 	.about h2 {
 	  font-size: 50px;

@@ -68,32 +68,38 @@
 				</div>
 				<script>
 					var ongoingimages = [
-							'images/1.jpg',
-							'images/2.jpg',
-							'images/3.jpg',
-							'images/4.jpg'
+							'images/OngoingHouses/1.jpg',
+							'images/OngoingHouses/2.png',
+							'images/OngoingHouses/3.jpg',
+							'images/OngoingHouses/4.jpg',
+							'images/OngoingHouses/5.jpg'
 					];
 					for(var i=0; i<ongoingimages.length; i++){
-						$('#row').append('<div class="col-md-6 col-sm-6"><div class="house" id="ongoing-'+i+'"><div class="service-img"><img class="img-responsive" src="'+ongoingimages[i]+'" alt="" /></div><h3>House '+(i+1)+'</h3></div><div>');
+						$('#row').append('<div class="col-md-6 col-sm-6"><div class="house" id="ongoing-'+i+'"><div class="service-img"><img class="img-responsive" src="'+ongoingimages[i]+'" alt="" /></div></div><div>');
+					}
+					if(ongoingimages.length%2==1){
+						$('#row').append('<div style="opacity:0" class="col-md-6 col-sm-6"><div style="pointer:none" id="ongoing-'+i+'"><div class="service-img"><img class="img-responsive" alt="" /></div></div><div>');
 					}
 					$('#row').append('<h2 style="margin-bottom:30px">Finished Projects</h2>');
 					var finishedimages = [
-							'images/1.jpg',
-							'images/2.jpg',
-							'images/3.jpg',
-							'images/4.jpg'
+							'images/FinishedHouses/1.jpg',
+							'images/FinishedHouses/2.png',
+							'images/FinishedHouses/3.jpg',
+							'images/FinishedHouses/4.jpg',
+							'images/FinishedHouses/5.jpg'
 					];
 					for(var i=0; i<finishedimages.length; i++){
-						$('#row').append('<div class="col-md-6 col-sm-6"><div class="house" id="finished-'+i+'"><div class="service-img"><img class="img-responsive" src="'+finishedimages[i]+'" alt="" /></div><h3>House '+(i+1)+'</h3></div><div>');
+						$('#row').append('<div class="col-md-6 col-sm-6"><div class="house" id="finished-'+i+'"><div class="service-img"><img class="img-responsive" src="'+finishedimages[i]+'" alt="" /></div></div><div>');
 					}
 
 				</script>
 			</div>
+			<img class="map" style="width:70%" src="images/WavechoHouseMap.png" />
 		</div><!-- end of portfolio section -->
 
 
 		<!-- footer starts here -->
-		<footer style="margin-top:-60px" class="footer clearfix">
+		<footer class="footer clearfix">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-5 footer-para">
